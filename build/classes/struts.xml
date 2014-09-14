@@ -31,5 +31,17 @@
             </result>
         </action>
     </package>
+    
+    <package name="front" extends="struts-default" namespace="/front">
+        <action name="index">
+            <result>/Namespace.jsp</result>
+        </action>
+    </package>
+    
+     <package name="main" extends="struts-default" namespace="">
+        <action name="indexnons">
+            <result>/Namespace.jsp</result>
+        </action>
+    </package>
 
 </struts>
