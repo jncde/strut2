@@ -57,4 +57,25 @@
         </action>
     </package>
 
+     
+      <package name="user" extends="struts-default" namespace="/user">
+          
+           <action name="index" >
+            <result>/jsp/DMI/index.jsp</result>
+         </action>
+          
+          <!-- not recommend, because you must maintain every method here 
+          http://localhost:8080/struts2/user/userAdd -->
+        <action name="userAdd" class="com.bjsxt.struts2.user.action.UserAction" method="add">
+            <result>/jsp/DMI/user_add_success.jsp</result>
+        </action>
+        
+         <!--  recommend!!!  DMI  
+         http://localhost:8080/struts2/user/user!add
+         -->
+        <action name="user" class="com.bjsxt.struts2.user.action.UserAction">
+            <result>/jsp/DMI/user_add_success.jsp</result>
+        </action>
+    </package>
+     
 </struts>
