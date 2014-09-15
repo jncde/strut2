@@ -49,5 +49,12 @@
             <result name="success">/ActionIntroduction.jsp</result>
         </action>
     </package>
+    
+    
+     <package name="path" extends="struts-default" namespace="/path">
+        <action name="path" class="com.bjsxt.struts2.path.action.PathAction">
+            <result name="path">/jsp/path/path.jsp</result>
+        </action>
+    </package>
 
 </struts>
