@@ -33,14 +33,20 @@
     </package>
     
     <package name="front" extends="struts-default" namespace="/front">
-        <action name="index">
+        <action name="ns">
             <result>/Namespace.jsp</result>
         </action>
     </package>
     
      <package name="main" extends="struts-default" namespace="">
-        <action name="indexnons">
+        <action name="nsnons">
             <result>/Namespace.jsp</result>
+        </action>
+    </package>
+    
+    <package name="front2" extends="struts-default" namespace="/">
+        <action name="index" class="com.bjsxt.struts2.front.action.IndexAction1">
+            <result name="success">/ActionIntroduction.jsp</result>
         </action>
     </package>
 
