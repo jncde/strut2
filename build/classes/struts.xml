@@ -45,7 +45,7 @@
     </package>
     
     <package name="front2" extends="struts-default" namespace="/">
-        <action name="index" class="com.bjsxt.struts2.front.action.IndexAction1">
+        <action name="index2" class="com.bjsxt.struts2.front.action.IndexAction1">
             <result name="success">/ActionIntroduction.jsp</result>
         </action>
     </package>
@@ -94,6 +94,23 @@
             <result  name="success">/jsp/wildcard/{1}_{2}_success.jsp</result>
             <result name="fail">/jsp/wildcard/{1}_{2}_fail.jsp</result>
            
+        </action>
+    </package>
+    
+       
+       
+       
+       
+        <package name="parameter" extends="struts-default" namespace="/parameter">
+        
+            <!-- action with parameter :  http://localhost:8080/struts2/parameter/userparameter!add?name=a&age=8 -->
+            
+            <action name="index" >
+            <result>/jsp/actionparameter/index.jsp</result>
+         </action>
+            
+        <action name="userparameter" class="com.bjsxt.struts2.user.parameter.action.UserAction">
+            <result>/jsp/actionparameter/user_add_success.jsp</result>
         </action>
     </package>
       
