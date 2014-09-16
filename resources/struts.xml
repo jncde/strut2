@@ -127,6 +127,19 @@
             <result>/jsp/domainmodelparam/user_add_success.jsp</result>
         </action>
     </package>
+    
+        <package name="dto" extends="struts-default" namespace="/dto">
+        
+            <!-- action with parameter :  http://localhost:8080/struts2/domainmodel/user!add?user.name=a&user.age=8 -->
+            
+            <action name="dtoindex" >
+            <result>/jsp/dto/dtoindex.jsp</result>
+         </action>
+            
+        <action name="dtouser" class="com.bjsxt.struts2.parameter.dto.UserAction">
+            <result>/jsp/dto/dto_user_add_success.jsp</result>
+        </action>
+    </package>
       
      
 </struts>
