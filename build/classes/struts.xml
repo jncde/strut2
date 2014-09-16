@@ -128,7 +128,7 @@
         </action>
     </package>
     
-        <package name="dto" extends="struts-default" namespace="/dto">
+      <package name="dto" extends="struts-default" namespace="/dto">
         
             <!-- action with parameter :  http://localhost:8080/struts2/domainmodel/user!add?user.name=a&user.age=8 -->
             
@@ -141,5 +141,20 @@
         </action>
     </package>
       
+    
+      <package name="md_user" extends="struts-default" namespace="/md_user">
+          
+          <!-- implement ModelDriven<T> interface: http://localhost:8080/struts2/md_user/user!add?name=a&age=8  -->
+          
+         <action name="md_index" >
+            <result>/jsp/modelDriven/md_index.jsp</result>
+         </action>
+        
+        <action name="user" class="com.bjsxt.struts2.modelDriven.UserAction">
+            <result>/jsp/modelDriven/md_user_add_success.jsp</result>
+        </action>
+    </package>   
+        
+        
      
 </struts>
