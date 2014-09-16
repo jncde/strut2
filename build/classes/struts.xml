@@ -114,5 +114,19 @@
         </action>
     </package>
       
+       
+        <package name="domainmodel" extends="struts-default" namespace="/domainmodel">
+        
+            <!-- action with parameter :  http://localhost:8080/struts2/domainmodel/user!add?user.name=a&user.age=8 -->
+            
+            <action name="index" >
+            <result>/jsp/domainmodelparam/index.jsp</result>
+         </action>
+            
+        <action name="user" class="com.bjsxt.struts2.parameter.domainmodel.UserAction">
+            <result>/jsp/domainmodelparam/user_add_success.jsp</result>
+        </action>
+    </package>
+      
      
 </struts>
