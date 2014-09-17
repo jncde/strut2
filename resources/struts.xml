@@ -155,6 +155,20 @@
         </action>
     </package>   
         
+      
+       <package name="sdv_user" extends="struts-default" namespace="/sdv_user">
+          
+          <!-- implement ModelDriven<T> interface: http://localhost:8080/struts2/md_user/user!add?name=a&age=8  -->
+          
+         <action name="sdv_index" >
+            <result>/jsp/simpleDataValidation/sdv_index.jsp</result>
+         </action>
+        
+        <action name="user" class="com.bjsxt.struts2.simpleDataValidation.UserAction">
+            <result>/jsp/simpleDataValidation/sdv_user_add_success.jsp</result>
+            <result name="error">/jsp/simpleDataValidation/sdv_user_add_error.jsp</result>
+        </action>
+    </package>   
         
      
 </struts>
