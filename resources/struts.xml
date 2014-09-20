@@ -169,6 +169,19 @@
             <result name="error">/jsp/simpleDataValidation/sdv_user_add_error.jsp</result>
         </action>
     </package>   
-        
+
+       
+   <package name="accessWebElements" extends="struts-default" namespace="/accessWebElements">
+       
+        <action name="index" >
+            <result>/jsp/accessWebElements/index.jsp</result>
+         </action>
+       
+        <action name="login*" class="com.bjsxt.struts2.accessWebElements.LoginAction{1}">
+            <result>/jsp/accessWebElements/user_login_success.jsp</result>
+        </action>
+    </package>
+       
+       
      
 </struts>
