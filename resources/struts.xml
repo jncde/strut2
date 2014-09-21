@@ -24,7 +24,7 @@
 -->
     <!-- Add packages here -->
     <constant name="struts.devMode" value="true " />
-    <package name="default" namespace="/" extends="struts-default">
+    <package name="hello" namespace="/" extends="struts-default">
         <action name="hello">
             <result  >
 					/Hello.jsp
@@ -181,7 +181,14 @@
             <result>/jsp/accessWebElements/user_login_success.jsp</result>
         </action>
     </package>
-       
+     
+   
+   <package name="default" namespace="/defaultAction" extends="struts-default">
+    	 <default-action-ref name="index"></default-action-ref>
+    	<action name="index">
+    		<result>/jsp/defaultAction/default.jsp</result>
+    	</action>
+    </package>
        
      
 </struts>
