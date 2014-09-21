@@ -189,6 +189,33 @@
     		<result>/jsp/defaultAction/default.jsp</result>
     	</action>
     </package>
-       
+
+   
+    <package name="resultTypes" namespace="/r" extends="struts-default">
+        
+        <action name="index">
+    		<result>/jsp/resultType/index.jsp</result>
+    	</action>
+        
+	    <action name="r1">
+	                <!-- can not  forward to an action -->
+	    	<result type="dispatcher">/jsp/resultType/r1.jsp</result>
+	    </action>
+	    
+	    <action name="r2">
+	    	<result type="redirect">/jsp/resultType/r2.jsp</result>
+	    </action>
+	    
+	    <action name="r3">
+	        <!-- forward to an action -->
+	    	<result type="chain">r1</result>
+	    </action>
+	    
+	    <action name="r4">
+	    	<result type="redirectAction">r2</result>
+	    </action>
+	    
+    </package>
+   
      
 </struts>
