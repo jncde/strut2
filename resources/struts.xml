@@ -216,6 +216,30 @@
 	    </action>
 	    
     </package>
+    
+    
+     <package name="globalResult" namespace="/g" extends="struts-default">
+    	
+    	
+    	<global-results>
+    		<result name="mainpage">/jsp/globalResult/main.jsp</result>
+    	</global-results>
+    	
+    	<action name="index">
+    		<result>/jsp/globalResult/index.jsp</result>
+    	</action>
+    	
+	    <action name="user" class="com.bjsxt.struts2.globalResult.UserAction">
+	    	<result>/jsp/globalResult/user_success.jsp</result>
+	    	<result name="error">/jsp/globalResult/user_error.jsp</result>
+	    </action>	    
+    </package>
+    
+    <package name="globalResultAdmin" namespace="/admin" extends="globalResult">
+    	<action name="admin" class="com.bjsxt.struts2.globalResult.AdminAction">
+    		<result>/jsp/globalResult/admin.jsp</result>
+    	</action>
+    </package>
    
      
 </struts>
