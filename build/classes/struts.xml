@@ -242,7 +242,7 @@
     </package>
     
     
-        <package name="dynamicResult" namespace="/dynamicResult" extends="struts-default">
+    <package name="dynamicResult" namespace="/dynamicResult" extends="struts-default">
     	
 	    <action name="index" >
 	    	<result>/jsp/dynamicResult/index.jsp</result>
@@ -252,5 +252,12 @@
 	    </action>	    
     </package>
    
-     
+    
+    <!--using url http://localhost:8080/struts2/ognl.action?username=shu&password=p&cat.fried=cat1 -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+	<include file="/com/bjsxt/struts2/ognl/ognl.xml"/>
+	
+	 
+        
 </struts>
